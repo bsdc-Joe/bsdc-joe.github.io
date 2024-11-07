@@ -1,0 +1,13 @@
+h1 {
+  background-color: black;
+  color: red;
+}
+button {
+  background-color: black color(srgb red green blue);
+}
+
+body {
+  background-image: url(../Images/Screenshot\ 2024-10-09\ 161941.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

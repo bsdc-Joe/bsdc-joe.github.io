@@ -11,3 +11,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.btn {
+    font-size: 15px;
+}

@@ -41,6 +41,28 @@ body{
 }
 a{color:inherit;text-decoration:none}
 .no-js .nav-burger{display:none}
+/* Stop sideways swipe showing white */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #0b0f14; /* your dark background */
+}
+
+/* Prevent overscroll bounce revealing background */
+body {
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none; /* optional */
+}
+
+/* iOS Safari extra safety */
+main, header, section {
+  overflow-x: clip; /* fallback: use hidden if clip not supported */
+}
+
+/* If clip causes issues on older browsers, replace with:
+main, header, section { overflow-x: hidden; }
+*/
 
 /* ===== Layout ===== */
 .container{

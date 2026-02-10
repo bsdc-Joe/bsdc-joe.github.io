@@ -1,77 +1,669 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="./styles.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>[Your Name] — Portfolio</title>
+  <meta name="description" content="Portfolio website for tech internships and junior roles." />
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 
 <body>
-   <h1></h1>
+  <!-- Top Nav -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top">[YN]</a>
 
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>My Portfolio</title>
-       <link rel="stylesheet" href="styles.css">
-   </head>
-   <body>
-       <nav>
-           <ul class="navbar">
-               <li><a href="#home" onclick="showTab('home')">Home</a></li>
-               <li><a href="/fake-website/index.html" onclick="showTab('other')">Fake Web</a></li>
-               <li><a href="https://linktr.ee/fluxfut" onclick="showTab('other')">FluxFUT </a></li>
-           </ul>
-       </nav>
-       <div id="home" class="tab-content">
-           <header>
-               <h1>Joe's Portfolio</h1>
-               <p>Hi my name is Joe and I am currently studying a level 3 programming and app development course at Burton College </p>
-           </header>
-           <section>
-               <h2>My Achievements:</h2>
-               <p>GCSE(2019-2024) <br>
-                Combined Science | 5-5 <br>
-                Computer Science | 4 <br>
-                English Literature | 9 <br>
-                Englsih Language | 8  <br>
-                PE | 6 <br>
-                RE | 6 <br>
-                Maths | 6 <br>
-               </p>
-           </section>
-           <section>
-               <h2>Projects</h2>
-               <ul>
-                   <li>Project 1: [Brief description]</li>
-                   <li>Project 2: [Brief description]</li>
-                   <li>Project 3: [Brief description]</li>
-               </ul>
-           </section>
-       </div>
-       <div id="other" class="tab-content" style="display: none;">
-           <h1>Other Tab</h1>
-           <p>This is the content for the other tab. You can customize this as needed.</p>
-       </div>
-       <script src="script.js"></script>
-   </body>
-   </html>
-   
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <!-- sun/moon swapped by JS -->
+        <span class="icon" data-icon="sun">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+        </span>
+        <span class="icon" data-icon="moon">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+          </svg>
+        </span>
+      </button>
 
+      <button class="icon-btn nav-burger" id="burger" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
 
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="container mobile-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
 
+  <!-- HERO -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="pill subtle">
+            <span class="dot"></span>
+            Open to internships · Starting uni Sept 2026
+          </div>
 
+          <h1 class="hero-title">
+            Hi, I'm <span class="accent">[Your Name]</span>
+          </h1>
 
+          <p class="hero-sub">
+            A curious Computer Science student building things at the intersection of code,
+            design, and problem-solving. Currently in college, heading to university in September.
+          </p>
 
-<script src="./app.js" ></script>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">
+              View Projects
+              <span class="btn-icon">↓</span>
+            </a>
+            <a class="btn ghost" href="#" onclick="alert('Replace this with your CV link (e.g. cv.pdf)')">
+              <span class="btn-ic">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <path d="M14 2v6h6"/>
+                </svg>
+              </span>
+              Download CV
+            </a>
+          </div>
 
+          <div class="hero-icons">
+            <a class="icon-link" href="#" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-6 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+            <a class="icon-link" href="#" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v2a4 4 0 0 1 2-3z"/>
+                <path d="M2 9h4v12H2z"/>
+                <path d="M4 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+              </svg>
+            </a>
+            <a class="icon-link" href="mailto:you@example.com" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16v16H4z"></path>
+                <path d="m22 6-10 7L2 6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="glow-card">
+            <div class="glow"></div>
+            <div class="card big">
+              <div class="card-topline">
+                <span class="tiny-muted">Currently</span>
+              </div>
+              <div class="big-rows">
+                <div class="kv"><span>Role</span><strong>CS Student</strong></div>
+                <div class="kv"><span>Location</span><strong>[City, Country]</strong></div>
+                <div class="kv"><span>Focus</span><strong>Web + AI + Fundamentals</strong></div>
+              </div>
+              <p class="muted small">
+                Tip: Replace all placeholders in the HTML with your real details and links.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">ABOUT</div>
+          <h2 class="h2">A little about me</h2>
+        </div>
+
+        <div class="two-col">
+          <div class="about-text card">
+            <p>
+              I'm an 18-year-old developer from <strong>[City, Country]</strong> with a passion for building
+              software that solves real problems. I started coding at 14, tinkering with Python scripts,
+              and quickly fell in love with the creative side of engineering.
+            </p>
+            <p>
+              Currently finishing my college studies, I'll be starting a Computer Science degree at
+              <strong> [University Name]</strong> this September. I'm excited about AI/ML, web development,
+              and creating tools that make people's lives easier.
+            </p>
+            <p>
+              When I'm not coding, you'll find me at hackathons, contributing to open-source projects,
+              or exploring the latest in tech. I'm actively seeking internships and entry-level roles
+              where I can learn from experienced engineers and contribute to meaningful projects.
+            </p>
+          </div>
+
+          <div class="stack">
+            <div class="card mini">
+              <div class="mini-title">
+                <span class="mini-ic">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 6v6l4 2"></path><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+                  </svg>
+                </span>
+                <strong>Currently</strong>
+              </div>
+              <p class="muted">
+                In college, heading to university in September. Actively looking for summer tech internships.
+                Building side projects and sharpening my skills daily.
+              </p>
+            </div>
+
+            <div class="card mini">
+              <div class="mini-title">
+                <span class="mini-ic">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 9h8M8 13h6"></path><path d="M10 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path>
+                  </svg>
+                </span>
+                <strong>Builder</strong>
+              </div>
+              <p class="muted">Love turning ideas into working software</p>
+            </div>
+
+            <div class="card mini">
+              <div class="mini-title">
+                <span class="mini-ic">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-6"></path>
+                  </svg>
+                </span>
+                <strong>Learner</strong>
+              </div>
+              <p class="muted">Always picking up new technologies</p>
+            </div>
+
+            <div class="card mini">
+              <div class="mini-title">
+                <span class="mini-ic">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </span>
+                <strong>Collaborator</strong>
+              </div>
+              <p class="muted">Thrive in team environments</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">PROJECTS</div>
+          <h2 class="h2">Featured work</h2>
+        </div>
+
+        <div class="grid-2">
+          <!-- Card 1 -->
+          <article class="card project">
+            <div class="project-top">
+              <span class="pill">AI / ML</span>
+              <div class="proj-links">
+                <a href="#" class="icon-btn sm" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-6 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" class="icon-btn sm" aria-label="Live Demo">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v7H3V3h7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="h3">Smart Study Planner</h3>
+            <p class="muted">
+              An AI-powered study scheduler that uses ML to optimise revision timetables
+              based on learning patterns and spaced repetition.
+            </p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Flask</span>
+              <span class="tag">React</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card project">
+            <div class="project-top">
+              <span class="pill">Web App</span>
+              <div class="proj-links">
+                <a href="#" class="icon-btn sm" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-6 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" class="icon-btn sm" aria-label="Live Demo">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v7H3V3h7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="h3">DevBoard</h3>
+            <p class="muted">
+              A real-time collaborative dashboard for dev teams with kanban boards, chat,
+              and GitHub integration. Built during a 48-hour hackathon.
+            </p>
+            <div class="tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Tailwind</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card project">
+            <div class="project-top">
+              <span class="pill">Game</span>
+              <div class="proj-links">
+                <a href="#" class="icon-btn sm" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-6 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" class="icon-btn sm" aria-label="Live Demo">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v7H3V3h7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="h3">PixelQuest</h3>
+            <p class="muted">
+              A retro-style 2D platformer game built with a custom physics engine.
+              Features procedural level generation and pixel-art graphics.
+            </p>
+            <div class="tags">
+              <span class="tag">C#</span>
+              <span class="tag">Unity</span>
+              <span class="tag">Aseprite</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card project">
+            <div class="project-top">
+              <span class="pill">Systems / Data</span>
+              <div class="proj-links">
+                <a href="#" class="icon-btn sm" aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-6 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </a>
+                <a href="#" class="icon-btn sm" aria-label="Live Demo">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v7H3V3h7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="h3">DataPipe CLI</h3>
+            <p class="muted">
+              A lightweight CLI tool for data pipeline orchestration. Handles CSV/JSON transforms,
+              API ingestion, and database exports.
+            </p>
+            <div class="tags">
+              <span class="tag">Go</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">SKILLS</div>
+          <h2 class="h2">Tech I work with</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-col">
+            <h3 class="h4">Languages</h3>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Go</span>
+              <span class="tag">C#</span>
+              <span class="tag">Java</span>
+              <span class="tag">SQL</span>
+              <span class="tag">HTML/CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-col">
+            <h3 class="h4">Frameworks</h3>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Express</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Unity</span>
+            </div>
+          </div>
+
+          <div class="skill-col">
+            <h3 class="h4">Tools</h3>
+            <div class="tags">
+              <span class="tag">Git</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Postman</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Vim</span>
+            </div>
+          </div>
+
+          <div class="skill-col">
+            <h3 class="h4">Cloud & DevOps</h3>
+            <div class="tags">
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Vercel</span>
+              <span class="tag">AWS (basics)</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">EXPERIENCE</div>
+          <h2 class="h2">What I've been up to</h2>
+        </div>
+
+        <div class="experience-stack">
+          <article class="card exp">
+            <div class="exp-ic">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7H4"></path><path d="M16 3H8"></path><path d="M6 7v14h12V7"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="h3">Freelance Web Developer</h3>
+              <div class="exp-meta">
+                <span class="accent-text">Self-employed</span>
+                <span class="muted">2024 – Present</span>
+              </div>
+              <p class="muted">
+                Built responsive websites and small web apps for local businesses. Managed client requirements,
+                designed UI mockups, and delivered on tight deadlines.
+              </p>
+            </div>
+          </article>
+
+          <article class="card exp">
+            <div class="exp-ic">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l8 4-8 4-8-4 8-4Z"></path>
+                <path d="M4 10l8 4 8-4"></path>
+                <path d="M4 14l8 4 8-4"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="h3">Volunteer Tech Lead</h3>
+              <div class="exp-meta">
+                <span class="accent-text">Code Club · [School/Community]</span>
+                <span class="muted">2023 – 2025</span>
+              </div>
+              <p class="muted">
+                Taught coding fundamentals to younger students. Organised workshops on web development and Python.
+                Mentored 10+ students through their first projects.
+              </p>
+            </div>
+          </article>
+
+          <article class="card exp">
+            <div class="exp-ic">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 21h8"></path>
+                <path d="M12 17v4"></path>
+                <path d="M7 4h10"></path>
+                <path d="M17 4v6a5 5 0 0 1-10 0V4"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="h3">Hackathon Participant</h3>
+              <div class="exp-meta">
+                <span class="accent-text">Various Events</span>
+                <span class="muted">2023 – Present</span>
+              </div>
+              <p class="muted">
+                Competed in 5+ hackathons including [Hackathon Name]. Won “Best Use of AI” at [Event] for building
+                a real-time accessibility tool. Collaborated under time pressure.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">EDUCATION</div>
+          <h2 class="h2">Academic journey</h2>
+        </div>
+
+        <div class="grid-2">
+          <article class="card edu">
+            <div class="pill subtle">Starting Sept 2026</div>
+            <h3 class="h3">BSc Computer Science</h3>
+            <p class="accent-text">[University Name]</p>
+            <p class="muted small">Expected graduation: 2029</p>
+
+            <div class="spacer"></div>
+            <p class="muted small"><strong>Key modules:</strong></p>
+            <div class="tags">
+              <span class="tag">Algorithms</span>
+              <span class="tag">Data Structures</span>
+              <span class="tag">AI & ML</span>
+              <span class="tag">Software Engineering</span>
+              <span class="tag">Databases</span>
+              <span class="tag">Networks</span>
+            </div>
+          </article>
+
+          <article class="card edu">
+            <div class="pill subtle">2024 – 2026</div>
+            <h3 class="h3">A-Levels / Diploma</h3>
+            <p class="accent-text">[College Name]</p>
+            <p class="muted small">Subjects: Maths, Computer Science, Physics</p>
+            <div class="spacer"></div>
+            <p class="muted">
+              Predicted grades: A*A*A. President of the Computer Science Society. Organised annual hackathon
+              with 80+ participants.
+            </p>
+          </article>
+        </div>
+
+        <div class="certs">
+          <div class="cert-head">
+            <span class="cert-ic">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7l3-7Z"></path>
+              </svg>
+            </span>
+            <strong>Certifications & Awards</strong>
+          </div>
+
+          <div class="cert-grid">
+            <div class="card cert">
+              <h4 class="h5">AWS Cloud Practitioner</h4>
+              <p class="muted small">Amazon Web Services · 2025</p>
+            </div>
+            <div class="card cert">
+              <h4 class="h5">Best AI Hack · [Hackathon]</h4>
+              <p class="muted small">MLH · 2025</p>
+            </div>
+            <div class="card cert">
+              <h4 class="h5">freeCodeCamp Full Stack</h4>
+              <p class="muted small">freeCodeCamp · 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head" style="margin-top: 56px;">
+          <div class="eyebrow">TESTIMONIALS</div>
+          <h2 class="h2">What people say</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card quote">
+            <p>“Fast learner, communicates clearly, and ships work that looks professional.”</p>
+            <p class="muted small">— Placeholder Name, Mentor</p>
+          </div>
+          <div class="card quote">
+            <p>“Great attention to detail and always improves after feedback.”</p>
+            <p class="muted small">— Placeholder Name, Teammate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">CONTACT</div>
+          <h2 class="h2">Let's connect</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-left">
+            <p class="muted">
+              I'm actively looking for <strong>summer 2026 internships</strong> and entry-level positions in
+              software engineering. Feel free to reach out — I'd love to chat!
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-ic">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path>
+                  </svg>
+                </span>
+                <a href="mailto:you@example.com">you@example.com</a>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-ic">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21s7-4.35 7-10a7 7 0 1 0-14 0c0 5.65 7 10 7 10Z"></path>
+                    <path d="M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                  </svg>
+                </span>
+                <span class="muted">[City, Country]</span>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-ic">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 7V3h8v4"></path>
+                    <path d="M3 7h18v14H3z"></path>
+                    <path d="M16 11H8"></path>
+                  </svg>
+                </span>
+                <span class="muted">Available from June 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <form class="card form" id="contactForm">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@company.com" required />
+              </label>
+
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
+              </label>
+
+              <button class="btn primary wide" type="submit">
+                Send Message
+                <span class="btn-ic">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 2 11 13"></path>
+                    <path d="M22 2 15 22l-4-9-9-4 20-7Z"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <p class="muted small" id="formNote">
+                This form is front-end only (no backend). It will open your email client.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="muted small">© <span id="year"></span> [Your Name]. Built with HTML/CSS/JS.</div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

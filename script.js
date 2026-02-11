@@ -166,7 +166,7 @@ form?.addEventListener("submit", (e) => {
     `Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\nMessage:\n${decodeURIComponent(msg)}`
   );
 
-  const to = "you@example.com";
+  const to = "jrolfe477@gmail.com";
   window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
 });
 

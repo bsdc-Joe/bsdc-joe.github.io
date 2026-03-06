@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications & Awards — Joseph Rolfe</title>
+  <meta name="description" content="All certifications and awards earned by Joseph Rolfe." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f14'/><text y='68' x='50' text-anchor='middle' font-size='42' font-family='system-ui,sans-serif' font-weight='700' fill='%23ff6a3d'>JR</text></svg>" />
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./script.js"></script>
+  <style>
+    .cert-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .cert-card-full {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .cert-card-full .cert-issuer {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .cert-card-full .cert-year {
+      font-size: 11px;
+      color: var(--muted2);
+    }
+    .cert-badge {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,106,61,.16);
+      background: rgba(255,106,61,.06);
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .cert-card-full .cert-link {
+      margin-top: auto;
+      padding-top: 12px;
+    }
+    .placeholder-card {
+      opacity: 0.4;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 32px;
+      transition: color .15s ease;
+    }
+    .back-link:hover { color: var(--text); }
+    @media (max-width: 980px) {
+      .cert-full-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .cert-full-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="./index.html">[JR]</a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#projects">Projects</a>
+        <a href="./index.html#skills">Skills</a>
+        <a href="./index.html#experience">Experience</a>
+        <a href="./index.html#education">Education</a>
+        <a href="./index.html#contact">Contact</a>
+        <span class="nav-indicator" aria-hidden="true"></span>
+      </nav>
+
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <span class="icon" data-icon="sun">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+        </span>
+        <span class="icon" data-icon="moon">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+          </svg>
+        </span>
+      </button>
+
+      <button class="icon-btn nav-burger" id="burger" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="container mobile-links">
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#projects">Projects</a>
+        <a href="./index.html#skills">Skills</a>
+        <a href="./index.html#experience">Experience</a>
+        <a href="./index.html#education">Education</a>
+        <a href="./index.html#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+
+        <a class="back-link" href="./index.html">
+          ← Back to Portfolio
+        </a>
+
+        <div class="section-head">
+          <div class="eyebrow">CERTIFICATIONS & AWARDS</div>
+          <h2 class="h2">My credentials</h2>
+          <p class="muted" style="margin-top:10px; font-size:15px;">
+            All certifications and awards I've earned. Each one is verified and linked to the original credential.
+          </p>
+        </div>
+
+        <div class="cert-full-grid">
+
+          <!-- Cisco: Computer Hardware Basics -->
+          <div class="card cert-card-full fade-up">
+            <div class="cert-badge">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7l3-7Z"></path>
+              </svg>
+            </div>
+            <h4 class="h5">Computer Hardware Basics</h4>
+            <span class="cert-issuer">Cisco</span>
+            <span class="cert-year">2026</span>
+            <a class="cert-link" href="https://www.credly.com/badges/b1e99398-9b2f-42fe-8c18-fca82782e723" target="_blank" rel="noopener">
+              View Certificate ↗
+            </a>
+          </div>
+
+          <!-- Placeholder 2 -->
+          <div class="card cert-card-full placeholder-card fade-up">
+            <div class="cert-badge">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7l3-7Z"></path>
+              </svg>
+            </div>
+            <h4 class="h5">Certification Title</h4>
+            <span class="cert-issuer">Issuer</span>
+            <span class="cert-year">Year</span>
+            <a class="cert-link" href="#" target="_blank" rel="noopener">
+              View Certificate ↗
+            </a>
+          </div>
+
+          <!-- Placeholder 3 -->
+          <div class="card cert-card-full placeholder-card fade-up">
+            <div class="cert-badge">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7l3-7Z"></path>
+              </svg>
+            </div>
+            <h4 class="h5">Certification Title</h4>
+            <span class="cert-issuer">Issuer</span>
+            <span class="cert-year">Year</span>
+            <a class="cert-link" href="#" target="_blank" rel="noopener">
+              View Certificate ↗
+            </a>
+          </div>
+
+          <!-- Placeholder 4 -->
+          <div class="card cert-card-full placeholder-card fade-up">
+            <div class="cert-badge">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7l3-7Z"></path>
+              </svg>
+            </div>
+            <h4 class="h5">Award / Achievement</h4>
+            <span class="cert-issuer">Organisation</span>
+            <span class="cert-year">Year</span>
+            <a class="cert-link" href="#" target="_blank" rel="noopener">
+              View Award ↗
+            </a>
+          </div>
+
+          <!-- Placeholder 5 -->
+          <div class="card cert-card-full placeholder-card fade-up">
+            <div class="cert-badge">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7l3-7Z"></path>
+              </svg>
+            </div>
+            <h4 class="h5">Award / Achievement</h4>
+            <span class="cert-issuer">Organisation</span>
+            <span class="cert-year">Year</span>
+            <a class="cert-link" href="#" target="_blank" rel="noopener">
+              View Award ↗
+            </a>
+          </div>
+
+          <!-- Placeholder 6 -->
+          <div class="card cert-card-full placeholder-card fade-up">
+            <div class="cert-badge">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 20l2-7L2 9h7l3-7Z"></path>
+              </svg>
+            </div>
+            <h4 class="h5">Award / Achievement</h4>
+            <span class="cert-issuer">Organisation</span>
+            <span class="cert-year">Year</span>
+            <a class="cert-link" href="#" target="_blank" rel="noopener">
+              View Award ↗
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="backToTop" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+</body>
+</html>

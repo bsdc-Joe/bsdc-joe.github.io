@@ -194,3 +194,26 @@ form?.addEventListener("submit", async (e) => {
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ===== Back to top =====
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("visible", window.scrollY > 400);
+}, { passive: true });
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// ===== Scroll animations =====
+document.querySelectorAll(".section, .card, .cert-grid .card").forEach(el => {
+  el.classList.add("fade-up");
+});
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add("in-view");
+      fadeObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll(".fade-up").forEach(el => fadeObs.observe(el));

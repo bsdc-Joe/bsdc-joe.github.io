@@ -149,25 +149,47 @@ window.addEventListener("load", () => {
   updateNavIndicator();
 });
 
-// ===== Contact form: open email client (no backend) =====
+// ===== Contact form: Formspree =====
+// Sign up free at https://formspree.io, create a form, then replace YOUR_FORM_ID below
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/maqpyjpg";
+
 const form = document.getElementById("contactForm");
+const submitBtn = document.getElementById("submitBtn");
+const formStatus = document.getElementById("formStatus");
 
-form?.addEventListener("submit", (e) => {
+form?.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const data = new FormData(form);
-  const name = encodeURIComponent(data.get("name"));
-  const email = encodeURIComponent(data.get("email"));
-  const msg = encodeURIComponent(data.get("message"));
 
-  const subject = encodeURIComponent(
-    `Portfolio enquiry from ${decodeURIComponent(name)}`
-  );
-  const body = encodeURIComponent(
-    `Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\nMessage:\n${decodeURIComponent(msg)}`
-  );
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending…";
 
-  const to = "jrolfe477@gmail.com";
-  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  try {
+    const response = await fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      form.reset();
+      formStatus.textContent = "Message sent! I'll get back to you soon.";
+      formStatus.style.display = "block";
+      formStatus.style.background = "rgba(255,106,61,.08)";
+      formStatus.style.border = "1px solid rgba(255,106,61,.25)";
+      formStatus.style.color = "var(--accent)";
+      submitBtn.textContent = "Sent!";
+    } else {
+      throw new Error("Failed");
+    }
+  } catch {
+    formStatus.textContent = "Something went wrong. Please email me directly at jrolfe477@gmail.com";
+    formStatus.style.display = "block";
+    formStatus.style.background = "rgba(255,80,80,.08)";
+    formStatus.style.border = "1px solid rgba(255,80,80,.25)";
+    formStatus.style.color = "#ff6b6b";
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = `Send Message <span class="btn-ic"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg></span>`;
+  }
 });
 
 // Footer year

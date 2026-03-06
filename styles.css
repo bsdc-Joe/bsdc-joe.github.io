@@ -34,6 +34,7 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
+  padding-top:64px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
   background: radial-gradient(1200px 700px at 50% -10%, rgba(255,106,61,.10), transparent 55%),
               linear-gradient(180deg, var(--bg), var(--bg2));
@@ -69,8 +70,9 @@ a{color:inherit;text-decoration:none}
 
 /* ===== Header / Nav ===== */
 .header{
-  position:sticky;
+  position:fixed;
   top:0;
+  width:100%;
   z-index:50;
   backdrop-filter: blur(10px);
   background: linear-gradient(180deg, rgba(7,10,14,.75), rgba(7,10,14,.35));
@@ -367,7 +369,18 @@ a{color:inherit;text-decoration:none}
   grid-template-columns: 1fr 1fr 1fr;
   gap:12px;
 }
-.card.cert{padding:14px 16px}
+.card.cert{padding:14px 16px; display:flex; flex-direction:column; gap:4px}
+.cert-link{
+  margin-top:8px;
+  font-size:11px;
+  color:var(--accent);
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  opacity:.8;
+  transition:.15s ease;
+}
+.cert-link:hover{opacity:1}
 .card.quote{padding:18px}
 .card.quote p{margin:0 0 8px; color:var(--muted); line-height:1.7}
 .card.quote p:first-child{color:var(--text)}

@@ -526,3 +526,32 @@ input::placeholder, textarea::placeholder{color:var(--muted2); opacity:.7}
   .skills-grid{grid-template-columns:1fr}
   .container{padding:0 18px}
 }
+
+/* ===== Print ===== */
+@media print {
+  :root {
+    --bg:#fff;
+    --bg2:#fff;
+    --panel:#fff;
+    --panel2:#fff;
+    --border:rgba(15,23,42,.12);
+    --border2:rgba(15,23,42,.14);
+    --text:#0f172a;
+    --muted:rgba(15,23,42,.70);
+    --muted2:rgba(15,23,42,.55);
+    --accent:#ff6a3d;
+    --shadow:none;
+  }
+  *{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+  .header, .nav-burger, #backToTop, #themeToggle, .mobile-menu,
+  .hero-actions, .cert-filters, .cert-full-grid .cert-link,
+  [data-proj-filter], footer { display:none !important }
+  body { background:#fff !important; color:#0f172a !important }
+  .card { border:1px solid #e2e8f0 !important; background:#fff !important; break-inside:avoid }
+  .accent, .accent-text { color:#ff6a3d !important }
+  a[href]::after { content:" (" attr(href) ")"; font-size:10px; color:#94a3b8 }
+  a.btn::after, a.icon-link::after, a.back-link::after { content:none }
+  .section { page-break-inside:avoid }
+  .hero { padding:24px 0 }
+  h1,h2,h3 { page-break-after:avoid }
+}

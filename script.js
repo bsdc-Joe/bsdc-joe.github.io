@@ -192,7 +192,23 @@ form?.addEventListener("submit", async (e) => {
 });
 
 // Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// ===== Reading progress % =====
+const readProgress = document.getElementById("readProgress");
+if (readProgress) {
+  window.addEventListener("scroll", () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? Math.round((window.scrollY / docHeight) * 100) : 0;
+    if (pct > 0) {
+      readProgress.style.display = "inline";
+      readProgress.textContent = pct + "%";
+    } else {
+      readProgress.style.display = "none";
+    }
+  }, { passive: true });
+}
 
 // ===== Back to top =====
 const backToTop = document.getElementById("backToTop");

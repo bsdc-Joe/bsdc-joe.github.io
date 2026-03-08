@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b0f14"/>
+  <!-- Subtle grid lines -->
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grid)" opacity="0.04"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <!-- Accent glow -->
+  <ellipse cx="600" cy="315" rx="420" ry="220" fill="#ff6a3d" opacity="0.05"/>
+  <!-- Logo badge -->
+  <rect x="80" y="64" width="72" height="72" rx="16" fill="#ff6a3d" opacity="0.12"/>
+  <rect x="80" y="64" width="72" height="72" rx="16" fill="none" stroke="#ff6a3d" stroke-width="1.5" opacity="0.3"/>
+  <text x="116" y="112" text-anchor="middle" font-size="28" font-family="system-ui, -apple-system, sans-serif" font-weight="800" fill="#ff6a3d">JR</text>
+  <!-- Name -->
+  <text x="80" y="240" font-size="64" font-family="system-ui, -apple-system, sans-serif" font-weight="800" fill="#f1f5f9" letter-spacing="-1">Joseph Rolfe</text>
+  <!-- Title -->
+  <text x="80" y="310" font-size="28" font-family="system-ui, -apple-system, sans-serif" font-weight="400" fill="#ff6a3d">Full-Stack Developer &amp; Cyber Security</text>
+  <!-- Divider -->
+  <rect x="80" y="346" width="80" height="3" rx="2" fill="#ff6a3d" opacity="0.6"/>
+  <!-- Subtitle -->
+  <text x="80" y="400" font-size="20" font-family="system-ui, -apple-system, sans-serif" fill="#94a3b8">Building modern web apps · AI · Cyber Security · Burton-on-Trent, UK</text>
+  <!-- Tags -->
+  <rect x="80" y="448" width="120" height="36" rx="18" fill="#ff6a3d" opacity="0.12" stroke="#ff6a3d" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="140" y="471" text-anchor="middle" font-size="14" font-family="system-ui, -apple-system, sans-serif" fill="#ff6a3d">Next.js</text>
+  <rect x="216" y="448" width="130" height="36" rx="18" fill="#ff6a3d" opacity="0.12" stroke="#ff6a3d" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="281" y="471" text-anchor="middle" font-size="14" font-family="system-ui, -apple-system, sans-serif" fill="#ff6a3d">TypeScript</text>
+  <rect x="362" y="448" width="100" height="36" rx="18" fill="#ff6a3d" opacity="0.12" stroke="#ff6a3d" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="412" y="471" text-anchor="middle" font-size="14" font-family="system-ui, -apple-system, sans-serif" fill="#ff6a3d">Python</text>
+  <rect x="478" y="448" width="120" height="36" rx="18" fill="#ff6a3d" opacity="0.12" stroke="#ff6a3d" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="538" y="471" text-anchor="middle" font-size="14" font-family="system-ui, -apple-system, sans-serif" fill="#ff6a3d">Node.js</text>
+  <!-- URL -->
+  <text x="80" y="562" font-size="16" font-family="system-ui, -apple-system, sans-serif" fill="#475569">joerolfe.github.io</text>
+</svg>

@@ -149,9 +149,8 @@ window.addEventListener("load", () => {
   updateNavIndicator();
 });
 
-// ===== Contact form: Formspree =====
-// Sign up free at https://formspree.io, create a form, then replace YOUR_FORM_ID below
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/maqpyjpg";
+// ===== Contact form: FormSubmit.co (no signup needed) =====
+const FORMSPREE_ENDPOINT = "https://formsubmit.co/ajax/jrolfe477@gmail.com";
 
 const form = document.getElementById("contactForm");
 const submitBtn = document.getElementById("submitBtn");

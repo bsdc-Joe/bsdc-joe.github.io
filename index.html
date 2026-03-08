@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Joseph Rolfe — Full-Stack Developer & Cyber Security</title>
-  <meta name="description" content="Portfolio of Joseph Rolfe, a full-stack developer with experience in AI, cyber security, and a background in video editing and graphic design. Based in Derbyshire, UK." />
+  <meta name="description" content="Portfolio of Joseph Rolfe, a full-stack developer with experience in AI, cyber security, and a background in video editing and graphic design. Based in Burton-on-Trent, Staffordshire, UK." />
   <meta property="og:title" content="Joseph Rolfe — Full-Stack Developer & Cyber Security" />
   <meta property="og:description" content="Portfolio of Joseph Rolfe, a full-stack developer with experience in AI, cyber security, and a background in video editing and graphic design." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://joerolfe.github.io/" />
-  <meta property="og:image" content="https://joerolfe.github.io/og-image.png" />
+  <meta property="og:image" content="https://joerolfe.github.io/og-image.svg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://joerolfe.github.io/og-image.png" />
+  <meta name="twitter:image" content="https://joerolfe.github.io/og-image.svg" />
   <meta name="theme-color" content="#0b0f14" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f14'/><text y='68' x='50' text-anchor='middle' font-size='42' font-family='system-ui,sans-serif' font-weight='700' fill='%23ff6a3d'>JR</text></svg>" />
   <link rel="stylesheet" href="./styles.css">
@@ -32,6 +32,7 @@
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
+        <a href="./certifications.html">Certs</a>
 
         <span class="nav-indicator" aria-hidden="true"></span>
       </nav>
@@ -66,6 +67,7 @@
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
+        <a href="./certifications.html">Certifications</a>
       </div>
     </div>
   </header>
@@ -142,9 +144,6 @@
                 <div class="kv"><span>Location</span><strong>Burton-on-Trent, Staffordshire</strong></div>
                 <div class="kv"><span>Focus</span><strong>Cyber Security</strong></div>
               </div>
-              <p class="muted small">
-              
-              </p>
             </div>
           </div>
         </div>
@@ -258,13 +257,15 @@
 
         <div class="cert-filters" role="group" aria-label="Filter projects" style="margin-bottom:24px; margin-top:0;">
           <button class="cert-filter-btn active" data-proj-filter="all">All</button>
-          <button class="cert-filter-btn" data-proj-filter="live">Live</button>
-          <button class="cert-filter-btn" data-proj-filter="open-source">Open Source</button>
+          <button class="cert-filter-btn" data-proj-filter="web">Web</button>
+          <button class="cert-filter-btn" data-proj-filter="bots">Bots / Automation</button>
+          <button class="cert-filter-btn" data-proj-filter="ai">AI</button>
+          <button class="cert-filter-btn" data-proj-filter="tools">Tools</button>
         </div>
 
         <div class="grid-2" id="projectsGrid">
           <!-- Card 1 -->
-          <article class="card project" data-proj-category="live">
+          <article class="card project" data-proj-category="web">
             <div class="project-top">
               <span class="pill subtle">Live</span>
               <div class="proj-links">
@@ -282,7 +283,7 @@
             </div>
             <h3 class="h3">FluxFUT</h3>
             <p class="muted">
-              A brand website for FluxFUT, an EAFC gaming niche content platform. Built and deployed on Vercel, serving as the online hub for the brand's community.
+              The official hub for the FluxFUT brand — a personal brand built around EAFC gaming content. The site promotes my socials, content, digital products, and Discord community, all in one place. Designed and built from scratch, then deployed on Vercel.
             </p>
             <div class="tags">
               <span class="tag">Next.js</span>
@@ -292,7 +293,7 @@
           </article>
 
   <!-- Card 2-->
-          <article class="card project" data-proj-category="live">
+          <article class="card project" data-proj-category="bots">
             <div class="project-top">
               <span class="pill subtle">Live</span>
               <div class="proj-links">
@@ -310,7 +311,7 @@
             </div>
             <h3 class="h3">FluxBot</h3>
             <p class="muted">
-              A Discord bot built for the FluxFUT server. Handles server administration and automatically answers community questions.
+              A custom Discord bot built for the FluxFUT server. Handles server administration and includes slash commands for looking up players, prices, and other EAFC-related data — keeping the community well-organised and interactive.
             </p>
             <div class="tags">
               <span class="tag">JavaScript</span>
@@ -319,64 +320,7 @@
               <span class="tag">Automation</span>
             </div>
           </article>
-  <!-- Card 3-->
-          <article class="card project">
-            <div class="project-top">
-              <span class="pill"></span>
-              <div class="proj-links">
-                <a href="#" class="icon-btn sm" aria-label="GitHub">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-6 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                  </svg>
-                </a>
-                <a href="#" class="icon-btn sm" aria-label="Live Demo">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v7H3V3h7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h3 class="h3"></h3>
-            <p class="muted">
-             
-            </p>
-            <div class="tags">
-              <span class="tag"></span>
-              <span class="tag"></span>
-              <span class="tag"></span>
-              <span class="tag"></span>
-            </div>
-          </article>
-  <!-- Card 4-->
-          <article class="card project">
-            <div class="project-top">
-              <span class="pill"></span>
-              <div class="proj-links">
-                <a href="#" class="icon-btn sm" aria-label="GitHub">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-4 1.5-4-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-6 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                  </svg>
-                </a>
-                <a href="#" class="icon-btn sm" aria-label="Live Demo">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14 3h7v7"></path><path d="M10 14 21 3"></path><path d="M21 14v7H3V3h7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h3 class="h3"></h3>
-            <p class="muted">
-             
-            </p>
-            <div class="tags">
-              <span class="tag"></span>
-              <span class="tag"></span>
-              <span class="tag"></span>
-              <span class="tag"></span>
-            </div>
-          </article>
 
-        
         </div>
       </div>
     </section>
@@ -387,37 +331,51 @@
         <div class="section-head">
           <div class="eyebrow">SKILLS</div>
           <h2 class="h2">Tech I work with</h2>
+          <div style="display:flex; gap:16px; margin-top:12px; flex-wrap:wrap;">
+            <span style="font-size:12px; color:var(--muted); display:flex; align-items:center; gap:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#64748b;display:inline-block;"></span>Beginner</span>
+            <span style="font-size:12px; color:var(--muted); display:flex; align-items:center; gap:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;display:inline-block;"></span>Intermediate</span>
+            <span style="font-size:12px; color:var(--muted); display:flex; align-items:center; gap:5px;"><span style="width:6px;height:6px;border-radius:50%;background:#ff6a3d;display:inline-block;"></span>Proficient</span>
+          </div>
         </div>
 
         <div class="skills-grid">
           <div class="skill-col">
             <h3 class="h4">Languages</h3>
             <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">SQL</span>
-              <span class="tag">HTML/CSS</span>
+              <span class="tag" data-level="mid">Python</span>
+              <span class="tag" data-level="mid">JavaScript</span>
+              <span class="tag" data-level="beginner">SQL</span>
+              <span class="tag" data-level="adv">HTML/CSS</span>
             </div>
           </div>
 
           <div class="skill-col">
             <h3 class="h4">Frameworks</h3>
             <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">Next.js</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Tailwind CSS</span>
+              <span class="tag" data-level="beginner">React</span>
+              <span class="tag" data-level="mid">Next.js</span>
+              <span class="tag" data-level="mid">Node.js</span>
+              <span class="tag" data-level="mid">Tailwind CSS</span>
             </div>
           </div>
 
           <div class="skill-col">
             <h3 class="h4">Tools</h3>
             <div class="tags">
-              <span class="tag">Git</span>
-              <span class="tag">VS Code</span>
-              <span class="tag">Figma</span>
-              <span class="tag">Trello</span>
-              <span class="tag">Notion</span>
+              <span class="tag" data-level="mid">Git</span>
+              <span class="tag" data-level="adv">VS Code</span>
+              <span class="tag" data-level="beginner">Figma</span>
+              <span class="tag" data-level="beginner">Trello</span>
+              <span class="tag" data-level="beginner">Notion</span>
+            </div>
+          </div>
+
+          <div class="skill-col">
+            <h3 class="h4">Cyber Security</h3>
+            <div class="tags">
+              <span class="tag" data-level="beginner">Networking Basics</span>
+              <span class="tag" data-level="beginner">TryHackMe</span>
+              <span class="tag" data-level="beginner">Password Cracking (basics)</span>
             </div>
           </div>
 
@@ -431,6 +389,17 @@
             
             </div>
           </div>
+
+          <div class="skill-col">
+            <h3 class="h4">Currently Learning</h3>
+            <div class="tags">
+              <span class="tag">TryHackMe Rooms</span>
+              <span class="tag">React</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Network+</span>
+            </div>
+          </div>
+
         </div>
 
         <div class="divider"></div>
@@ -508,6 +477,11 @@
             </div>
           </article>
         </div>
+
+        <div style="margin-top:28px;">
+          <a href="./experience.html" class="btn secondary">See All Experience →</a>
+        </div>
+
       </div>
     </section>
 
@@ -573,20 +547,6 @@
               <h4 class="h5">Computer Hardware Basics</h4>
               <p class="muted small">Cisco · 2026</p>
               <a class="cert-link" href="https://www.credly.com/badges/b1e99398-9b2f-42fe-8c18-fca82782e723" target="_blank" rel="noopener">
-                View Certificate ↗
-              </a>
-            </div>
-            <div class="card cert">
-              <h4 class="h5"></h4>
-              <p class="muted small"></p>
-              <a class="cert-link" href="#" target="_blank" rel="noopener">
-                View Certificate ↗
-              </a>
-            </div>
-            <div class="card cert">
-              <h4 class="h5"></h4>
-              <p class="muted small"></p>
-              <a class="cert-link" href="#" target="_blank" rel="noopener">
                 View Certificate ↗
               </a>
             </div>
@@ -671,7 +631,9 @@
           </div>
 
           <div class="contact-right">
-            <form class="card form" id="contactForm">
+            <form class="card form" id="contactForm" method="POST">
+              <input type="hidden" name="_subject" value="New message from portfolio">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
               <label>
                 <span>Name</span>
                 <input type="text" name="name" placeholder="Your name" required />

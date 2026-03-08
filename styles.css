@@ -316,6 +316,18 @@ a{color:inherit;text-decoration:none}
   background:rgba(255,255,255,.02);
   color:var(--muted);
 }
+.tag[data-level]::before{
+  content:'';
+  display:inline-block;
+  width:6px; height:6px;
+  border-radius:50%;
+  margin-right:5px;
+  vertical-align:middle;
+  position:relative; top:-1px;
+}
+.tag[data-level="beginner"]::before{background:#64748b}
+.tag[data-level="mid"]::before{background:#f59e0b}
+.tag[data-level="adv"]::before{background:var(--accent)}
 
 /* ===== Skills ===== */
 .skills-grid{

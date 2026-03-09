@@ -83,7 +83,7 @@ function setActive(hash) {
 }
 
 // ===== Section tracking (fixes missing About/Experience/Contact) =====
-const sectionIds = ["about", "projects", "skills", "experience", "education", "contact"];
+const sectionIds = ["about", "projects", "skills", "experience", "education", "certifications", "contact"];
 const sections = sectionIds
   .map((id) => document.getElementById(id))
   .filter(Boolean);

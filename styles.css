@@ -91,6 +91,8 @@ body::before{
 }
 [data-theme="light"] .tag[data-level="adv"]::before{ background:#3b82f6 }
 [data-theme="light"] .tag[data-level="mid"]::before{ background:#60a5fa }
+[data-theme="light"] .skill-dot.adv{ background:#3b82f6 }
+[data-theme="light"] .skill-dot.mid{ background:#60a5fa }
 [data-theme="light"] .cert-filter-btn.active{
   border-color:rgba(59,130,246,.30);
   background:rgba(59,130,246,.08);
@@ -435,6 +437,10 @@ a{color:inherit;text-decoration:none}
 .tag[data-level="beginner"]::before{background:#64748b}
 .tag[data-level="mid"]::before{background:#f59e0b}
 .tag[data-level="adv"]::before{background:var(--accent)}
+.skill-dot{width:6px;height:6px;border-radius:50%;display:inline-block;}
+.skill-dot.beginner{background:#64748b}
+.skill-dot.mid{background:#f59e0b}
+.skill-dot.adv{background:var(--accent)}
 
 /* ===== Skills ===== */
 .skills-grid{

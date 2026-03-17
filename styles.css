@@ -102,6 +102,16 @@ body::before{
   border-color:rgba(59,130,246,.45);
   box-shadow:0 0 0 3px rgba(59,130,246,.10);
 }
+[data-theme="light"] .mini-ic,
+[data-theme="light"] .exp-ic,
+[data-theme="light"] .cert-ic{
+  border-color:rgba(59,130,246,.16);
+  background:rgba(59,130,246,.06);
+}
+[data-theme="light"] .contact-ic{
+  border-color:rgba(59,130,246,.18);
+  background:rgba(59,130,246,.07);
+}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth; overflow-x:hidden; background:#0b1118}
